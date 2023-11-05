@@ -34,6 +34,11 @@ TestCase.prototype.file = function (filepath) {
   return this;
 };
 
+TestCase.prototype.key = function (key) {
+  this._attributes.key = key;
+  return this;
+};
+
 TestCase.prototype.failure = function (message, type) {
   this._failure = true;
   if (message) {
