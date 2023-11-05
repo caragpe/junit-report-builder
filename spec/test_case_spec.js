@@ -78,6 +78,16 @@ describe('Test Case builder', function () {
     });
   });
 
+  it('should add the provided key as an attribute', function () {
+    testCase.key('my.keyId');
+
+    testCase.build(parentElement);
+
+    expect(parentElement.ele).toHaveBeenCalledWith('testcase', {
+      classname: 'my.keyId',
+    });
+  });
+  
   it('should add the provided time as an attribute', function () {
     testCase.time(100);
 
